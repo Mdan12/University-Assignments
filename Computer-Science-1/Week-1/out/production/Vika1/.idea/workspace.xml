@@ -47,10 +47,22 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Virdisauki">
+  <component name="RunManager" selected="Application.Hradi">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+    <configuration name="Flatarmal" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Flatarmal" />
+      <module name="Vika1" />
+      <option name="PROGRAM_PARAMETERS" value="10.0 3.11" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Haekkun" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Haekkun" />
+      <module name="Vika1" />
+      <option name="PROGRAM_PARAMETERS" value="500 300" />
+      <method v="2" />
     </configuration>
     <configuration name="HalloHeimur" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HalloHeimur" />
@@ -62,6 +74,18 @@
       <option name="MAIN_CLASS_NAME" value="Heimilisfang" />
       <module name="Vika1" />
       <option name="PROGRAM_PARAMETERS" value="3 101" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Hradi" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Hradi" />
+      <module name="Vika1" />
+      <option name="PROGRAM_PARAMETERS" value="60 70" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Namskeid" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Namskeid" />
+      <module name="Vika1" />
+      <option name="PROGRAM_PARAMETERS" value="TÖL 101 G" />
       <method v="2" />
     </configuration>
     <configuration name="Virdisauki" type="Application" factoryName="Application">

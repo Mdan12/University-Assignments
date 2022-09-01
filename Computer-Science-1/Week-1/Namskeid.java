@@ -2,7 +2,7 @@
  *  Nafn    : Magnús Daníel Budai Einarsson
  *  T-póstur: mde2@hi.is
  *
- *  Lýsing  :
+ *  Lýsing  : Tekur inn þrjá strengi af skipanalínu, skeytir þeim saman í einn streng og prentar út.
  *
  *
  *****************************************************************************/

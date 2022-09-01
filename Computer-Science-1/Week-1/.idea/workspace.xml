@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2362c4d8-f17b-4ce9-b4f4-a4888d7180b0" name="Changes" comment="" />
+    <list default="true" id="2362c4d8-f17b-4ce9-b4f4-a4888d7180b0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flatarmal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Flatarmal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Haekkun.java" beforeDir="false" afterPath="$PROJECT_DIR$/Haekkun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hradi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hradi.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +30,11 @@
     <toolWindowToFront>false</toolWindowToFront>
     <toolWindowEditorPreview>false</toolWindowEditorPreview>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="2DnGDmP5XeLkElVYG2kw07sIIeO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="autoscrollFromSource" value="true" />
@@ -47,7 +56,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Hradi">
+  <component name="RunManager" selected="Application.Namskeid">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -79,7 +88,7 @@
     <configuration name="Hradi" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Hradi" />
       <module name="Vika1" />
-      <option name="PROGRAM_PARAMETERS" value="60 70" />
+      <option name="PROGRAM_PARAMETERS" value="50 30" />
       <method v="2" />
     </configuration>
     <configuration name="Namskeid" type="Application" factoryName="Application">
