@@ -13,23 +13,27 @@
 public class Bilastaedi {
     public static void main(String[] args) {
         String bilnumer = args[0];
-        String stafur = args[1];
+        char stafur = args[1].charAt(0);
         int tala1 = Integer.parseInt(args[2]);
         int tala2 = Integer.parseInt(args[3]);
         int tala3 = tala2 - tala1;
         switch (stafur) {
-            case "A":
+            case 'A':
                 int svar = 450 * tala3;
                 System.out.print(bilnumer + " " + svar);
-            case "B":
-                int svar1 = 600 * tala3;
-                System.out.print(bilnumer + " " + svar1);
-            case "U":
-                int svar2 = 750 * tala3;
-                System.out.print(bilnumer + " " + svar2);
-            case "W":
-                int svar3 = 900 * tala3;
-                System.out.print(bilnumer + " " + svar3);
+                break;
+            case 'B':
+                svar = 600 * tala3;
+                System.out.print(bilnumer + " " + svar);
+                break;
+            case 'U':
+                svar = 750 * tala3;
+                System.out.print(bilnumer + " " + svar);
+                break;
+            case 'W':
+                svar = 900 * tala3;
+                System.out.print(bilnumer + " " + svar);
+                break;
         }
 
     }

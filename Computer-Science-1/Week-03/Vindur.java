@@ -14,11 +14,11 @@ public class Vindur {
         int wind = Integer.parseInt(args[0]);
         if (wind > 31) {
             System.out.print("Ofsaveður");
-        } else if (wind > 29) {
-            System.out.print("fáviðri");
-        } else if (wind > 24) {
+        } else if (wind >= 29) {
+            System.out.print("Fárviðri");
+        } else if (wind >= 24) {
             System.out.print("Rok");
-        } else if (wind > 0) {
+        } else if (wind >= 0) {
             System.out.print("Annað");
         } else if (wind < 0) {
             System.out.print("Ólöglegt");
