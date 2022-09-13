@@ -1,100 +1,20 @@
-<tr>
-    <th>The Pragmatic Programmer: From Journeyman to Master</th>
-    <th>Andy Hunt</th>
-    <th>https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer</th>
-</tr>
-<tr>
-    <th>The C Programming Language</th>
-    <th>Brian W. Kernighan</th>
-    <th>https://www.goodreads.com/book/show/515601.The_C_Programming_Language</th>
-</tr>
-<tr>
-    <th>Clean Code: A Handbook of Agile Software Craftsmanship</th>
-    <th>Robert C. Martin</th>
-    <th>https://www.goodreads.com/book/show/3735293-clean-code</th>
-</tr>
-<tr>
-    <th>Design Patterns: Elements of Reusable Object-Oriented Software</th>
-    <th>Erich Gamma</th>
-    <th>https://www.goodreads.com/book/show/85009.Design_Patterns</th>
-</tr>
-<tr>
-    <th>Code Complete</th>
-    <th>Steve McConnell</th>
-    <th>https://www.goodreads.com/book/show/4845.Code_Complete</th>
-</tr>
-<tr>
-    <th>Structure and Interpretation of Computer Programs</th>
-    <th>Harold Abelson</th>
-    <th>https://www.goodreads.com/book/show/43713.Structure_and_Interpretation_of_Computer_Programs</th>
-</tr>
-<tr>
-    <th>Introduction to Algorithms</th>
-    <th>Thomas H. Cormen</th>
-    <th>https://www.goodreads.com/book/show/108986.Introduction_to_Algorithms</th>
-</tr>
-<tr>
-    <th>Refactoring: Improving the Design of Existing Code</th>
-    <th>Martin Fowler</th>
-    <th>https://www.goodreads.com/book/show/44936.Refactoring</th>
-</tr>
-<tr>
-    <th>The Mythical Man-Month: Essays on Software Engineering</th>
-    <th>Frederick P. Brooks Jr.</th>
-    <th>https://www.goodreads.com/book/show/13629.The_Mythical_Man_Month</th>
-</tr>
-<tr>
-    <th>The Art of Computer Programming, Volumes 1-3 Boxed Set</th>
-    <th>Donald Ervin Knuth</th>
-    <th>https://www.goodreads.com/book/show/112239.The_Art_of_Computer_Programming_Volumes_1_3_Boxed_Set</th>
-</tr>
-<tr>
-    <th>Head First Design Patterns</th>
-    <th>Eric Freeman</th>
-    <th>https://www.goodreads.com/book/show/58128.Head_First_Design_Patterns</th>
-</tr>
-<tr>
-    <th>The Clean Coder: A Code of Conduct for Professional Programmers</th>
-    <th>Robert C. Martin</th>
-    <th>https://www.goodreads.com/book/show/10284614-the-clean-coder</th>
-</tr>
-<tr>
-    <th>The C++ Programming Language</th>
-    <th>Bjarne Stroustrup</th>
-    <th>https://www.goodreads.com/book/show/112251.The_C_Programming_Language</th>
-</tr>
-<tr>
-    <th>JavaScript: The Good Parts</th>
-    <th>Douglas Crockford</th>
-    <th>https://www.goodreads.com/book/show/2998152-javascript</th>
-</tr>
-<tr>
-    <th>Working Effectively with Legacy Code</th>
-    <th>Michael C. Feathers</th>
-    <th>https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code</th>
-</tr>
-<tr>
-    <th>Compilers: Principles, Techniques, and Tools</th>
-    <th>Alfred V. Aho</th>
-    <th>https://www.goodreads.com/book/show/703102.Compilers</th>
-</tr>
-<tr>
-    <th>The Little Schemer</th>
-    <th>Daniel P. Friedman</th>
-    <th>https://www.goodreads.com/book/show/548914.The_Little_Schemer</th>
-</tr>
-<tr>
-    <th>Modern Operating Systems</th>
-    <th>Andrew S. Tanenbaum</th>
-    <th>https://www.goodreads.com/book/show/166195.Modern_Operating_Systems</th>
-</tr>
-<tr>
-    <th>Test-Driven Development: By Example</th>
-    <th>Kent Beck</th>
-    <th>https://www.goodreads.com/book/show/387190.Test_Driven_Development</th>
-</tr>
-<tr>
-    <th>The UNIX Programming Environment</th>
-    <th>Brian W. Kernighan</th>
-    <th>https://www.goodreads.com/book/show/337338.The_UNIX_Programming_Environment</th>
-</tr>
+The Pragmatic Programmer: From Journeyman to Master;Andy Hunt;https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer
+The C Programming Language;Brian W. Kernighan;https://www.goodreads.com/book/show/515601.The_C_Programming_Language
+Clean Code: A Handbook of Agile Software Craftsmanship;Robert C. Martin;https://www.goodreads.com/book/show/3735293-clean-code
+Design Patterns: Elements of Reusable Object-Oriented Software;Erich Gamma;https://www.goodreads.com/book/show/85009.Design_Patterns
+Code Complete;Steve McConnell;https://www.goodreads.com/book/show/4845.Code_Complete
+Structure and Interpretation of Computer Programs;Harold Abelson;https://www.goodreads.com/book/show/43713.Structure_and_Interpretation_of_Computer_Programs
+Introduction to Algorithms;Thomas H. Cormen;https://www.goodreads.com/book/show/108986.Introduction_to_Algorithms
+Refactoring: Improving the Design of Existing Code;Martin Fowler;https://www.goodreads.com/book/show/44936.Refactoring
+The Mythical Man-Month: Essays on Software Engineering;Frederick P. Brooks Jr.;https://www.goodreads.com/book/show/13629.The_Mythical_Man_Month
+The Art of Computer Programming, Volumes 1-3 Boxed Set;Donald Ervin Knuth;https://www.goodreads.com/book/show/112239.The_Art_of_Computer_Programming_Volumes_1_3_Boxed_Set
+Head First Design Patterns;Eric Freeman;https://www.goodreads.com/book/show/58128.Head_First_Design_Patterns
+The Clean Coder: A Code of Conduct for Professional Programmers;Robert C. Martin;https://www.goodreads.com/book/show/10284614-the-clean-coder
+The C++ Programming Language;Bjarne Stroustrup;https://www.goodreads.com/book/show/112251.The_C_Programming_Language
+JavaScript: The Good Parts;Douglas Crockford;https://www.goodreads.com/book/show/2998152-javascript
+Working Effectively with Legacy Code;Michael C. Feathers;https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code
+Compilers: Principles, Techniques, and Tools;Alfred V. Aho;https://www.goodreads.com/book/show/703102.Compilers
+The Little Schemer;Daniel P. Friedman;https://www.goodreads.com/book/show/548914.The_Little_Schemer
+Modern Operating Systems;Andrew S. Tanenbaum;https://www.goodreads.com/book/show/166195.Modern_Operating_Systems
+Test-Driven Development: By Example;Kent Beck;https://www.goodreads.com/book/show/387190.Test_Driven_Development
+The UNIX Programming Environment;Brian W. Kernighan;https://www.goodreads.com/book/show/337338.The_UNIX_Programming_Environment
