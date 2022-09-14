@@ -12,6 +12,29 @@
  *****************************************************************************/
 public class Bilastaedi {
     public static void main(String[] args) {
-    double num = Double.parseDouble(args[0]);
+        String bilnumer = args[0];
+        char stafur = args[1].charAt(0);
+        int tala1 = Integer.parseInt(args[2]);
+        int tala2 = Integer.parseInt(args[3]);
+        int tala3 = tala2 - tala1;
+        switch (stafur) {
+            case 'A':
+                int svar = 450 * tala3;
+                System.out.print(bilnumer + " " + svar);
+                break;
+            case 'B':
+                svar = 600 * tala3;
+                System.out.print(bilnumer + " " + svar);
+                break;
+            case 'U':
+                svar = 750 * tala3;
+                System.out.print(bilnumer + " " + svar);
+                break;
+            case 'W':
+                svar = 900 * tala3;
+                System.out.print(bilnumer + " " + svar);
+                break;
+        }
+
     }
 }
