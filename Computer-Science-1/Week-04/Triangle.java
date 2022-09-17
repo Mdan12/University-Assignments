@@ -6,12 +6,14 @@
 *
 *
  *****************************************************************************/
- public class Slembi {
+public class Triangle {
     public static void main(String[] args) {
-        double xtra = StdRandom.uniformDouble(0.0, 1.0);
-        while (xtra <= 0.8) {
-            System.out.println(xtra);
-            xtra = StdRandom.uniformDouble(0.0, 1.0);
+        int n = Integer.parseInt(args[0]);
+        for(int i=1;i<=n;i++){  
+            for(int j=1;j<=i;j++){  
+                System.out.print("*");  
+            }
+            System.out.println();
         }
     }
- }
+}
