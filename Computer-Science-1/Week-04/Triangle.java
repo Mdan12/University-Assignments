@@ -1,8 +1,10 @@
- /******************************************************************************
- *  Nafn    : Magnús Daníel Budai Einarsson
-*  T-póstur: mde2@hi.is
+/******************************************************************************
+*  Nafn    : Magnús Daníel Budai Einarsson
+*  T-póstur: mde2(hjá)hi.is
 *
-*  Lýsing  :
+* Lýsing  : Skrifið main fall sem fær inn á skipanalínunni
+* heiltöluna N. Forritið notað hreiðraðar for-lykkjur til þess að prenta út
+* þríhyrning úr stjörnum, sem hefur N línur og N dálka. 
 *
 *
  *****************************************************************************/

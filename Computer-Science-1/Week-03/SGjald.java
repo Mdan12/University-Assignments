@@ -2,7 +2,9 @@
  *  Nafn    : Magnús Daníel Budai Einarsson
  *  T-póstur: mde2@hi.is
  *
- *  Lýsing  :
+ *  Lýsing  : Tekur inn af skipanalínu þyngd sendingar sem heiltölu og áfangastaður sendingar, 
+ * E fyrir Evrópa og U fyrir utan Evrópu  
+ * Reiknar út sendingakostnað sem samanstendur af grunngjaldi og aðalgjaldi. 
  *
  *
  *****************************************************************************/

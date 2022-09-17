@@ -2,7 +2,12 @@
  *  Nafn    : Magnús Daníel Budai Einarsson
  *  T-póstur: mde2@hi.is
  *
- *  Lýsing  :
+ *  Lýsing  : Les inn tvær heiltölur aTala og bil af skipanalínu.  
+ * Fyrri talan er Unicode (Tenglar á ytra svæði.) (ascii) kóðinn fyrir char breytuna a
+ * aTala+bil er Unicode kóðinn fyrir char breytuna b og
+ * aTala+2*bil er Unicode kóðinn fyrir char breytuna c.
+ * Forritið prentar út stafarunu sem lítur svona út
+ * abcba
  *
  *
  *****************************************************************************/

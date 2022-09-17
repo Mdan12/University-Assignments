@@ -1,8 +1,10 @@
  /******************************************************************************
  *  Nafn    : Magnús Daníel Budai Einarsson
-*  T-póstur: mde2@hi.is
+*  T-póstur: mde2(hjá)hi.is
 *
-*  Lýsing  :
+*  Lýsing  : Forritið tekur inn heiltöluna lengdOrms af skipanalínu  og fyrir hverja tölu i = 1,2,...lengdOrms  
+prentar út jafnmargar störnur og talan i segir til um og þar á eftir töluna i. Þið getið reiknað með að lengdOrms sé > 0. 
+* Ekki má nota if-setningu.
 *
 *
  *****************************************************************************/

@@ -2,7 +2,8 @@
  *  Nafn    : Magnús Daníel Budai Einarsson
  *  T-póstur: mde2@hi.is
  *
- *  Lýsing  :
+ *  Lýsing  : Teknar eru inn tvær kommutölur, nafnvextir og verðbólgustig,
+ * Raunvextir eru reiknaðir út og prentaðir
  *
  *
  *****************************************************************************/

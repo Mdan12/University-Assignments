@@ -2,7 +2,8 @@
  *  Nafn    : Magnús Daníel Budai Einarsson
  *  T-póstur: mde2@hi.is
  *
- *  Lýsing  :
+ *  Lýsing  : Les inn kommutölu, k, setur kvaðratrót af k í annað
+ * veldi og setur í breytuna utkoma, prentar út utkoma og röksegðina  utkoma > k
  *
  *
  *****************************************************************************/

@@ -2,7 +2,8 @@
  *  Nafn    : Magnús Daníel Budai Einarsson
  *  T-póstur: mde2@hi.is
  *
- *  Lýsing  :
+ *  Lýsing  : Tekur inn þrjár heiltölur af skipanalínu og prentar út stærstu
+ * heiltöluna
  *
  *
  *****************************************************************************/

@@ -1,8 +1,11 @@
  /******************************************************************************
  *  Nafn    : Magnús Daníel Budai Einarsson
-*  T-póstur: mde2@hi.is
+*  T-póstur: mde2(hjá)hi.is
 *
-*  Lýsing  :
+*  Lýsing  : Engin gögn eru lesin inn af skipanalínu.
+* Skrifið main-fall sem kallar á fallið  StdRandom.uniform(0.0,1.0) og skrifar út slembitöluna sem uniform skilar
+* á meðan slembitalan er minni en 0.8 (þ.e. forritið hættir um leið og slembitala ≥ 0.8). Notið while-lykkju til að
+* leysa þetta verkefni.
 *
 *
  *****************************************************************************/

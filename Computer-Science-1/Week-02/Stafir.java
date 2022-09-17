@@ -2,7 +2,7 @@
  *  Nafn    : Magnús Daníel Budai Einarsson
  *  T-póstur: mde2@hi.is
  *
- *  Lýsing  :
+ *  Lýsing  : Tekur inn tvær heiltölur, a og b,  af skipanalínu, prentar út samsvarandi char gildi a og char gildi af a+b 
  *
  *
  *****************************************************************************/

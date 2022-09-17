@@ -2,7 +2,7 @@
  *  Nafn    : Magnús Daníel Budai Einarsson
  *  T-póstur: mde2@hi.is
  *
- *  Lýsing  :
+ *  Lýsing  : Tekur inn radíus kúlu sem kommutölu af skipanalínu og prentar út rúmmál hennar.
  *
  *
  *****************************************************************************/
