@@ -2,6 +2,7 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "Computer-Science-1/Week-04/stdrandom.jar",
-        "/Users/magnusde93/Downloads/stdlib.jar"
+        "/Users/magnusde93/Downloads/stdlib.jar",
+        "/Users/magnusde93/Downloads/IntroCS/**/*.jar"
     ]
 }
