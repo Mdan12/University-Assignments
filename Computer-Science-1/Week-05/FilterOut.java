@@ -16,7 +16,7 @@ public class FilterOut {
     double nedri = Double.parseDouble(args[0]);
     double efri = Double.parseDouble(args[1]);
     Scanner s = new Scanner(System.in, StandardCharsets.UTF_8);
-    s.useLocale(Locale.US);
+    // s.useLocale(Locale.US);
     while (s.hasNext()) {
       double choice = s.nextDouble();
       if (choice < nedri || choice > efri) {
