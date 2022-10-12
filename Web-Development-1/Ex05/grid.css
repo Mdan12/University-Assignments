@@ -1,4 +1,5 @@
 /* https://css-tricks.com/building-css-grid-overlay/ */
+
 :root {
   --grid-color: hsla(0, 75%, 75%, 0.25);
   --grid-repeating-width: calc(100% / var(--columns));
