@@ -8,7 +8,7 @@
  *****************************************************************************/
 public class Summa {
 
-  public static int tveirStaerstu(int[] a) {
+  public static int staerstu(int[] a){
     int largestA = a[0]; //fyrsta stak i fylki a.
     int largestB = 0;
     for (int i = 0; i < a.length; i++) {
@@ -22,8 +22,13 @@ public class Summa {
         largestB = a[i];
       }
     }
+    return largestB + largestA;
+  }
+
+  public static int tveirStaerstu(int[] a) {
+    
     //Þetta skilar svo summuna af tveimur hæstu tölunum í þessu methodi.
-    return largestA + largestB;
+    return staerstu(a);
   }
 
   public static void main(String[] args) {
