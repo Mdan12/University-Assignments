@@ -36,42 +36,35 @@ function isValidNum(numAsString, min, max) {
  * @returns `null` ef notandi hættir við, annars vali notanda sem tölu.
  */
 function getChoice(numOfCups) {
-  let guess = prompt(`Hvaða bolla veluru af ${numOfCups}?`)
-  
+  let guess = prompt(`Hvaða bolla veluru af ${numOfCups}?`);
+  guess = parseInt(guess);
+
   if (guess === null) {
     return null;
   }
 
-  while (true){
-    if (!isNaN(guess)){
-      break;
-    } else
-    guess = prompt(`Vinsamlegast veldu aðeins tölu milli ${MIN_NUM_OF_CUPS-1} og ${numOfCups}`);
-  }
-
-
   while (true) {
-    if (isValidNum(guess,MIN_NUM_OF_CUPS-1, numOfCups)) {
+    if (!isNaN(guess) || isValidNum(guess, 1, numOfCups)) {
       break;
     } else
       guess = prompt(
-        `Vinsamlegast veldu aðeins tölu milli ${MIN_NUM_OF_CUPS-1} og ${numOfCups}`);
-  }
+        `Vinsamlegast veldu aðeins tölu milli ${
+          MIN_NUM_OF_CUPS - 1
+        } og ${numOfCups}`
+      );
 
-  let bollar = randomNumber(1, numOfCups);
-  let bollarStig = numOfCups - 1;
-  let result = 0;
+    let bollar = randomNumber(1, numOfCups);
+    let bollarStig = numOfCups - 1;
 
-  if (guess == bollar) {
-    alert(`Rétt. Þú færð ${bollarStig} stig.`);
-    points += bollarStig;
-    won ++;
-    played ++;
-    return
-  } else {
-    alert(`Rangt, boltinn var í bolla númer ${bollar}`);
-    played ++;
-    return
+    if (guess == bollar) {
+      alert(`Rétt. Þú færð ${bollarStig} stig.`);
+      points += bollarStig;
+      won++;
+      played++;
+    } else {
+      alert(`Rangt, boltinn var í bolla númer ${bollar}`);
+      played++;
+    }
   }
 }
 
@@ -101,7 +94,7 @@ function play() {
     if (numOfCups === null) {
       return;
     }
-    if (isNaN(numOfCupsNumber)){
+    if (isNaN(numOfCupsNumber)) {
       console.error(`${numOfCups} er ekki löglegt gildi.`);
       return;
     }
@@ -111,10 +104,8 @@ function play() {
       return;
     }
 
-    const result = getChoice(numOfCups);
-
+    getChoice(numOfCups);
   } while (confirm("Spila aftur?"));
-  
 }
 
 /**
@@ -124,6 +115,8 @@ function games() {
   if (played === 0) {
     console.log("Þú hefur ekki spilað neina leiki");
   } else {
-    console.log(`Leikir spilaðir: ${played}. Unnir leikir: ${won}. Stig: ${points}`);
+    console.log(
+      `Leikir spilaðir: ${played}. Unnir leikir: ${won}. Stig: ${points}`
+    );
   }
 }
