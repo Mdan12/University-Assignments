@@ -37,32 +37,42 @@ function isValidNum(numAsString, min, max) {
  */
 function getChoice(numOfCups) {
   let guess = prompt(`Hvaða bolla veluru af ${numOfCups}?`)
+  
   if (guess === null) {
     return null;
   }
 
+  while (true){
+    if (!isNaN(guess)){
+      break;
+    } else
+    guess = prompt(`Vinsamlegast veldu aðeins tölu milli ${MIN_NUM_OF_CUPS-1} og ${numOfCups}`);
+  }
+
+
   while (true) {
-    if (isValidNum(guess,MIN_NUM_OF_CUPS, numOfCups)) {
+    if (isValidNum(guess,MIN_NUM_OF_CUPS-1, numOfCups)) {
       break;
     } else
       guess = prompt(
-        `Vinsamlegast veldu aðeins tölu milli ${MIN_NUM_OF_CUPS} og ${numOfCups}`
-      );
+        `Vinsamlegast veldu aðeins tölu milli ${MIN_NUM_OF_CUPS-1} og ${numOfCups}`);
   }
 
-  let bollar = randomNumber(MIN_NUM_OF_CUPS, numOfCups);
-  let bollarStig = bollar - 1;
+  let bollar = randomNumber(1, numOfCups);
+  let bollarStig = numOfCups - 1;
   let result = 0;
 
   if (guess == bollar) {
     alert(`Rétt. Þú færð ${bollarStig} stig.`);
     points += bollarStig;
-    result = 1;
+    won ++;
+    played ++;
+    return
   } else {
     alert(`Rangt, boltinn var í bolla númer ${bollar}`);
-    result = -1;
+    played ++;
+    return
   }
-  return result;
 }
 
 /**
@@ -103,15 +113,6 @@ function play() {
 
     const result = getChoice(numOfCups);
 
-    if (result === null) {
-      return;
-    }
-    if (result === 1) {
-      won ++;
-      played ++;
-    } else if (result === -1) {
-      played ++;
-    }
   } while (confirm("Spila aftur?"));
   
 }
