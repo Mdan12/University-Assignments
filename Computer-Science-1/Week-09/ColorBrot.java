@@ -24,12 +24,9 @@ import java.io.File;
     }
 
     public static Square lesaMidja(String skra){
-        In midja = new In(new File(skra));
-        double a = midja.readDouble();
-        double b = midja.readDouble();
-        int c = midja.readInt();
-        Square kassi = new Square(a,b,c);
-        return kassi;
+        In midja = new In(skra);
+        Square a = new Square(midja.readDouble(), midja.readDouble(), midja.readInt());
+        return a;
     }
 
     public static Color[] lesaColors(String skra, int itranir){
@@ -55,8 +52,8 @@ import java.io.File;
     public static void main(String[] args) {
         int N = Integer.parseInt(args[0]);
         int ITERS = Integer.parseInt(args[1]);
-        Color[] colors = lesaColors("/Users/magnusde93/University-Assignments/Computer-Science-1/Week-09/mandel.txt", ITERS);
-        Square kassi = lesaMidja("/Users/magnusde93/University-Assignments/Computer-Science-1/Week-09/midja.txt");
+        Color[] colors = lesaColors("mandel.txt", ITERS);
+        Square kassi = lesaMidja("midja.txt");
         Picture picture = reiknaMandelBrot(kassi, N, ITERS, colors);
         picture.show();
     }

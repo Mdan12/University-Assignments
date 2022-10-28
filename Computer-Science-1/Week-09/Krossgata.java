@@ -21,26 +21,22 @@ public class Krossgata {
      * sameiginlega bókstafsins
      */
     public static TvoOrd samiStafur(String s1, String s2) {
-        int a, b;
-        a = 0;
-        b = 0;
-        for (int i = 0; i<s1.length(); i++){
-            for (int j = 0; i<s2.length(); j++){
-                if (s1.charAt(i)==s2.charAt(j)){
-                    a = s1.charAt(i);
-                    b = s2.charAt(j);
-                }
-                else {
-                    return null;
-                }
-            }
+        if (s1.equals(s2))  {
+            return null;
         }
-        TvoOrd bla = new TvoOrd(s1, a, s2, b);
-        return bla;
+        for (int i = 0; i<s1.length(); i++){
+            for (int j = 0; j<s2.length(); j++){
+                if (s1.charAt(i)==s2.charAt(j)){
+                    return new TvoOrd(s1, i, s2, j);
+                }
+            }  
+        }
+
+        return null;
     }
 
     /**
-     * Finnur tvö mismunnandi í fylki af orðum  sem hafa sameiginlegan staf og
+     * Finnur tvö mismunnandi orð í fylki af orðum sem hafa sameiginlegan staf og
      * skilar hlut af klasanum TvoOrd sem inniheldur orðin tvö og
      * sætin með sameiginlega stafnum
      *
@@ -50,6 +46,12 @@ public class Krossgata {
      * þá skilar aðferðin null hlut
      */
     public static TvoOrd finnaOrd(String[] ordK) {
+        for (int i = 0; i < ordK.length; i++) {
+            TvoOrd t = finnaOrd(ordK, ordK[i]);
+            if(t != null){
+                return t;
+            }
+        }
         return null;
     }
 
