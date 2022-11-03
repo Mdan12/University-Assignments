@@ -4,7 +4,7 @@
  * Fjarlægir öll element sem eru innan gefins element.
  * @param {element} element Element sem á að tæma.
  */
-export function emptyElement(element) {
+ export function emptyElement(element) {
   while (element.firstElementChild) {
     element.firstElementChild.remove();
   }
@@ -15,7 +15,21 @@ export function emptyElement(element) {
  * @param {string} screen Annað hvort `main` eða `waiting` eftir því hvort á að birta.
  */
 export function showScreen(screen) {
-  // TODO útfæra
+  const main = document.querySelector('.game__main');
+  const waiting = document.querySelector('.game__waiting');
+
+  main.classList.add('game__main--hidden')
+  waiting.classList.add('game__waiting--hidden')
+
+  switch (screen) {
+    case 'main':
+      main.classList.remove('game__main--hidden')
+      break;
+    case 'waiting':
+      waiting.classList.remove('game__waiting--hidden')
+      break;
+    default:
+  }
 }
 
 /**
@@ -27,5 +41,21 @@ export function showScreen(screen) {
  * @returns Elementi fyrir bolla.
  */
 export function createCup(num, svg, onClick) {
-  // TODO útfæra
+  const el = document.createElement('div');
+  el.classList.add('cup')
+
+  const image = el.appendChild(svg.cloneNode(true))
+  el.appendChild(image);
+
+  const button = document.createElement('button');
+  button.classList.add('cup__button');
+  button.addEventListener('click', onClick)
+  button.innerText = num.toString();
+  button.dataset.num = num;
+
+  el.appendChild(button);
+
+  return el;
+
 }
+

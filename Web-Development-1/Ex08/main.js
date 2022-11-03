@@ -1,5 +1,5 @@
 import { isValidNum, randomNumber } from './lib/helpers.js';
-import { createCup, emptyElement, showScreen } from './lib/ui.js';
+import { createCup, emptyElement, showScreen} from './lib/ui.js';
 
 /** Lágmark bolla sem má velja. */
 const MIN_NUM_OF_CUPS = 2;
@@ -36,6 +36,7 @@ const svg = document.querySelector('svg').cloneNode(true);
 // Setjum rétt gildi fyrir hámark í villuskilaboðum.
 document.querySelector('#max_cups').innerText = MAX_NUM_OF_CUPS;
 
+
 /**
  * Meðhöndlar það sem gerist þegar notandi velur bolla:
  * - Ef engin bolti er falinn, birtir biðskjá.
@@ -49,9 +50,27 @@ document.querySelector('#max_cups').innerText = MAX_NUM_OF_CUPS;
  * @returns
  */
 function onCupClick(e) {
-  // TODO útfæra
+  let gamesplayed = document.getElementById("games");
+  let stig = document.getElementById('points');
+  e.preventDefault;
+  let gisk = parseInt(e.target.dataset.num);
+  const cup = document.querySelector(".cups").children[gisk-1];
+  const cup_svg = cup.querySelector(".cup__svg");
 
-}
+  if (gisk === state.currentCup){
+    emptyElement(cup_svg);
+    cup_svg.classList.add("ball");
+    gamesplayed.innerText ++;
+    state.points += state.currentPointsAvailable;
+    stig.innerText = state.points;
+  } else {
+    emptyElement(cup_svg);
+    gamesplayed.innerText ++;
+  }
+  setTimeout(function (){
+    showScreen('waiting');
+    }, SHOW_WAITINGSCREEN_TIME)
+ }
 
 /**
  * Tæmir `parent` og býr til `num` bollum og setur þangað inn.
@@ -59,7 +78,12 @@ function onCupClick(e) {
  * @param {element} parent Element sem á að setja bollana inn í.
  */
 function createCups(num, parent) {
-  // TODO útfæra
+  emptyElement(parent)
+
+  for (let i = 1; i <= num; i++) {
+    const cup = createCup(i, svg, onCupClick);
+    parent.appendChild(cup);
+  }
 }
 
 /**
@@ -76,12 +100,27 @@ function createCups(num, parent) {
 function onFormSubmit(e) {
   e.preventDefault();
 
-  const formError = document.querySelector('.form__error');
+  const input = e.target.querySelector('input')
+  const value = input.value;
 
+  const isValid = isValidNum(value, MIN_NUM_OF_CUPS, MAX_NUM_OF_CUPS);
+
+  const formError = document.querySelector('.form__error');
   formError.classList.add('form__error--hidden');
 
-  // TODO útfæra
+  const valueAsNumber = Number.parseInt(value)
+  if (isValid) {
+    showScreen('main');
+    createCups(valueAsNumber, document.querySelector('.cups'))
+    state.currentCup = randomNumber(1, valueAsNumber);
+    state.played = parseInt(document.getElementById("games").innerText);
+  } else {
+    formError.classList.remove('form__error--hidden');
+  }
+  state.currentPointsAvailable = valueAsNumber-1;
 }
+
+
 
 // Tengir event handler við formið.
 document.querySelector('form').addEventListener('submit', onFormSubmit);
