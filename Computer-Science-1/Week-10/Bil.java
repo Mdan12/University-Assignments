@@ -9,7 +9,6 @@
 public class Bil {
     private double minni;
     private double staerri;
-    // smiður
     public Bil(double min, double max) {
         minni = min;
         staerri = max;
@@ -22,8 +21,7 @@ public class Bil {
         if (b.staerri>minni && b.minni<minni) return true;
         if (b.staerri>minni && b.minni<staerri) return true;
         if (b.staerri==staerri || b.minni==minni) return true;
-        return false;
-        
+        return false; 
     }
     public String toString () {
         return "bilin [" + minni + ", " + staerri + "] og" ;

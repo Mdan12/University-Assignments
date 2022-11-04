@@ -1,4 +1,7 @@
- /******************************************************************************
+import java.util.Objects;
+import java.util.Scanner;
+
+/******************************************************************************
  *  Nafn    : Magnús Daníel Budai Einarsson
 *  T-póstur: mde2(hjá)hi.is
 *
@@ -8,23 +11,24 @@
  *****************************************************************************/
 public class Ferdamati {
 
-    // tilviksbreytur
-    // Forritið hér
+
+    private String ferdamati;
+    private double spor;
 
     // smiður - tekur inn nafn ferðamáta og kolefnisspor hans
     Ferdamati(String f, double k) {
         // Forritið hér
+        ferdamati = f;
+        spor = k;
     }
 
     // getterar
     public String getFerdamati() {
-        // Forritið hér
-        return null;
+        return ferdamati;
     }
 
     public double getKolefnisspor() {
-        // Forritið hér
-        return 0;
+        return spor;
     }
 
     // flettir upp ferðamáta s í safni safn og skilar ferðamáta
@@ -48,10 +52,12 @@ public class Ferdamati {
      * @param ferdamati fylki af mögulegum ferðamátum og kolefnisspori þeirra
      */
     public static void lesaSpor(Scanner s, Ferdamati[] ferdamati) {
-        // Forritið hér
-
-        // Síðasta lína í ykkar forriti
+        while (s.hasNext()){
+        for (int i = 0; i<ferdamati.length;i++){
+            ferdamati[i] = new Ferdamati(s.next(), s.nextDouble());
+        }
         s.nextLine();
+    }
     }
 
 

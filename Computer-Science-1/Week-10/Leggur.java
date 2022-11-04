@@ -7,12 +7,13 @@
 *
  *****************************************************************************/
 public class Leggur {
-    // tilviksbreytur
-    // Forritið hér
+    private String ferdamati1;
+    private double kilometri;
 
     // smiður fyrir legg - tekur inn ferðamáta og vegalengd innan ferðar
     public Leggur(String ferdamati, double kilometer) {
-        // Forritið hér
+        ferdamati1 = ferdamati;
+        kilometri = kilometer;
     }
 
     // reiknar út kolefnisspor fyrir legginn ef spor inniheldur alla ferðamáta
@@ -24,6 +25,7 @@ public class Leggur {
     // les inn eina ferð úr strengnum s og býr til fylki af Leggur
     public static Leggur[] lesaFerd(String s) {
         // Forritið hér
+        // nextline og split
        return null;
     }
 
