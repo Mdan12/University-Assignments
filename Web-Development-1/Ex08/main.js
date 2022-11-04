@@ -26,6 +26,9 @@ const state = {
 
   /** Fjöldi stiga sem eru í boði í núverandi leik. */
   currentPointsAvailable: 0,
+
+  // Er leikur í gangi
+  gameactive: false
 };
 
 // Afritum SVG sem er nákvæmlega eitt stykki af í DOM í byrjun
@@ -50,27 +53,31 @@ document.querySelector('#max_cups').innerText = MAX_NUM_OF_CUPS;
  * @returns
  */
 function onCupClick(e) {
-  let gamesplayed = document.getElementById("games");
-  let stig = document.getElementById('points');
-  e.preventDefault;
-  let gisk = parseInt(e.target.dataset.num);
-  const cup = document.querySelector(".cups").children[gisk-1];
-  const cup_svg = cup.querySelector(".cup__svg");
+  if (state.gameactive){
+    let gamesplayed = document.getElementById("games");
+    let stig = document.getElementById('points');
+    e.preventDefault;
+    let gisk = parseInt(e.target.dataset.num);
+    const cup = document.querySelector(".cups").children[gisk-1];
+    const cup_svg = cup.querySelector(".cup__svg");
 
-  if (gisk === state.currentCup){
-    emptyElement(cup_svg);
-    cup_svg.classList.add("ball");
-    gamesplayed.innerText ++;
-    state.points += state.currentPointsAvailable;
-    stig.innerText = state.points;
-  } else {
-    emptyElement(cup_svg);
-    gamesplayed.innerText ++;
+    if (gisk === state.currentCup){
+      emptyElement(cup_svg);
+      cup_svg.classList.add("ball");
+      gamesplayed.innerText ++;
+      state.points += state.currentPointsAvailable;
+      stig.innerText = state.points;
+    } else {
+      emptyElement(cup_svg);
+      gamesplayed.innerText ++;
+
+    }
+    state.gameactive = false;
   }
   setTimeout(function (){
     showScreen('waiting');
     }, SHOW_WAITINGSCREEN_TIME)
- }
+}
 
 /**
  * Tæmir `parent` og býr til `num` bollum og setur þangað inn.
@@ -114,6 +121,7 @@ function onFormSubmit(e) {
     createCups(valueAsNumber, document.querySelector('.cups'))
     state.currentCup = randomNumber(1, valueAsNumber);
     state.played = parseInt(document.getElementById("games").innerText);
+    state.gameactive = true;
   } else {
     formError.classList.remove('form__error--hidden');
   }
