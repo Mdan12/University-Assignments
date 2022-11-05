@@ -7,26 +7,33 @@
 *
  *****************************************************************************/
 public class Leggur {
-    private String ferdamati1;
-    private double kilometri;
+    private final String ferdamati;
+    private final double kilometer;
 
     // smiður fyrir legg - tekur inn ferðamáta og vegalengd innan ferðar
     public Leggur(String ferdamati, double kilometer) {
-        ferdamati1 = ferdamati;
-        kilometri = kilometer;
+        this.ferdamati = ferdamati;
+        this.kilometer = kilometer;
     }
+
 
     // reiknar út kolefnisspor fyrir legginn ef spor inniheldur alla ferðamáta
     public double reiknaKolefnisspor(Ferdamati[] spor) {
-        // Forritið hér
-        return 0;
+        return (Ferdamati.flettaUppFerdamati(ferdamati, spor).getKolefnisspor() * kilometer);
     }
 
     // les inn eina ferð úr strengnum s og býr til fylki af Leggur
     public static Leggur[] lesaFerd(String s) {
-        // Forritið hér
-        // nextline og split
-       return null;
+        String[] ferd = s.split(",");
+        Leggur[] leggur = new Leggur[ferd.length / 2];
+
+        for (int i = 0; i < ferd.length; i += 2) {
+            String f = ferd[i];
+            double k = Double.parseDouble(ferd[i + 1]);
+            leggur[i / 2] = new Leggur(f, k);
+
+        }
+        return leggur;
     }
 
     // prófanaaktygi fyrir Leggur

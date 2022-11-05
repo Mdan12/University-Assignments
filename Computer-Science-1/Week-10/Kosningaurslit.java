@@ -1,5 +1,8 @@
  import java.util.Scanner;
- import java.util.Arrays;
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Locale;
+import java.util.Objects;
  /******************************************************************************
  *  Nafn    : Magnús Daníel Budai Einarsson
 *  T-póstur: mde2(hjá)hi.is
@@ -8,31 +11,39 @@
 *
 *
  *****************************************************************************/
- public class Kosningaurslit {
+
+public class Kosningaurslit {
     public static void main(String[] args) {
-      Scanner s = new Scanner(System.in);
-      int fjoldiFlokka = s.nextInt();
-      s.nextLine();
-      String[] ollKjordaemi = s.nextLine().split(" ");
-      int[] atkvaediEftirKjordaemi = new int[ollKjordaemi.length];
-      int[] atkvaediEftirFlokka = new int[fjoldiFlokka];
-      while (s.hasNextLine()){
-        var lina = s.nextLine().split(" ");
-        int flokkur = Integer.parseInt(lina[0]);
-        String kjordaemi = lina[1];
-        int atkvaedi = Integer.parseInt(lina[2]);
-        atkvaediEftirFlokka[flokkur-1]+=atkvaedi;
-        int abba =ixFerdamati(kjordaemi, ollKjordaemi);
-        atkvaediEftirKjordaemi[abba] += atkvaedi;
-      }
-      System.out.println(Arrays.toString(atkvaediEftirFlokka));
+        int x = 0;
+        Scanner s = new Scanner(System.in, StandardCharsets.UTF_8);
+        s.useLocale(Locale.US);
+        int fjoldaFlokka = Integer.parseInt(s.nextLine());
+        int[] flokkar = new int[fjoldaFlokka];
+        int[] atkvaediFlokka = new int[fjoldaFlokka];
+        while (x < fjoldaFlokka) {
+            flokkar[x] = x + 1;
+            x++;
+        }
+        String[] kjoerdaemi = s.nextLine().split(" ");
+        int[] atkvaediKjordaemi = new int[kjoerdaemi.length];
+        while (s.hasNext()) {
+            String[] lina = s.nextLine().split(" ");
+            int flokkur = Integer.parseInt(lina[0]);
+            String kjordami = lina[1];
+            int atkvaedi = Integer.parseInt(lina[2]);
+            for (int y = 0; y < flokkar.length; y++) {
+                if (flokkar[y] == flokkur) {
+                    atkvaediFlokka[y] += atkvaedi;
+                }
+            }
+            for (int z = 0; z < kjoerdaemi.length; z++) {
+                if (Objects.equals(kjoerdaemi[z], kjordami)) {
+                    atkvaediKjordaemi[z] += atkvaedi;
+                }
+            }
+            System.out.println("Atkvæði flokka " + Arrays.toString(atkvaediFlokka));
+            System.out.println("Atkvæði kjördæma " + Arrays.toString(atkvaediKjordaemi));
+        }
     }
-    
-    public static int ixFerdamati(String s, String[] safn) {
-      for (int i = 0; i < safn.length; i++) {
-          if (s.equals(safn[i]))
-              return i;
-      }
-      return -1;
-  }
 }
+
