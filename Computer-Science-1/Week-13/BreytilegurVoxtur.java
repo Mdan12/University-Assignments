@@ -6,8 +6,6 @@
 *
 *
  *****************************************************************************/
- public class Reiknivel {
-    public static void main(String[] args) {
- 
-      }
+public interface BreytilegurVoxtur  {
+    double fjoldi (double x, double voxtur, double hradi);
 }
