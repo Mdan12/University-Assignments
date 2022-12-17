@@ -1,21 +1,20 @@
+
 /******************************************************************************
  *  Nafn    : Ebba Þóra Hvannberg
  *  T-póstur: ebba@hi.is
  *
  *  Lýsing  : Klasi sem lýsir lagi. Tilviksbreytur eru titill lags, flytjandi lags
- *  og hve vinsæll hann er. Hægt er að spila lagið og þá hækkar spilun þess (vinsældir)
+ *  og hve vinsæll hann er. Hægt er að spila lagið og þá hækkar spilun þess 
+(vinsældir)
  *  Einnig er hægt að fá streng sem sýnir innihald lagsins og hægt að fá
  *  bara spilunina (vinsældir) *
  *
  *****************************************************************************/
-
 public class Lag {
     // Tilviksbreytur
     private String titill;  // titill lags
     private String flytjandi; // Flytjandi lags
     private int spilun;     // Vinsældir lags
-
-
     /**
      * Smiður lags
      *
@@ -28,21 +27,20 @@ public class Lag {
         flytjandi = f;
         spilun = s;
     }
-
+    public String getTitill() {
+        return titill;
+    }
+    public void setTitill(String titill) {
+        this.titill = titill;
+    }
     // skilar vinsældum lags
     public int getSpilun() {
         return spilun;
     }
-
-    public String getTitill(){
-        return titill;
-    }
-
     // spila lag og þá aukast vinsældir
     public void spila() {
         spilun++;
     }
-
     // skilar innihaldi hlutar sem streng
     public String toString() {
         return "Lag{" +
@@ -51,7 +49,6 @@ public class Lag {
                 ", spilun=" + spilun +
                 '}';
     }
-
     public static void main(String[] args) {
         Lag lag1 = new Lag("700 þúsund stólar", "GDRN og Magnús Jóhann", 1500);
         lag1.spila();

@@ -13,12 +13,8 @@ public class Kennitala {
          String kennitala = args[0];
          final int[] studull = { 3, 2, 7, 6, 5, 4, 3, 2 };
          int sum = 0;
-         int[] kennitalaaASCII = new int [kennitala.length()];
-         for (int i = 0; i<kennitala.length(); i++){
-            kennitalaaASCII[i] = kennitala.charAt(i)-'0';
-         }
-         for (int j=0; j<8;j++){
-            sum+=kennitalaaASCII[j] * studull[j];
+         for (int i = 0; i<8; i++){
+            sum+= (kennitala.charAt(i)-'0') * studull[i];
          }
          int sumMod = 11 - (sum%11);
          System.out.print(sumMod);

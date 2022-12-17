@@ -29,10 +29,8 @@ public class Bil {
      * @return
      */
     public boolean skarast(Bil b) {
-        if (b.staerri>minni && b.minni<minni) return true;
-        if (b.staerri>minni && b.minni<staerri) return true;
-        if (b.staerri==staerri || b.minni==minni) return true;
-        return false; 
+        if (b.minni>staerri|| b.staerri<minni) return false;
+        return true; 
     }
     // Breytir textanum í streng og prentar í main fallinu.
     public String toString () {
@@ -40,7 +38,9 @@ public class Bil {
     }
     
     public static void main(String[] args) {
-        Bil a = new Bil(3.5, 4.5);
-        System.out.println(a.toString());
+        Bil a = new Bil(3.5, 3.9);
+        Bil b = new Bil(2.5, 4.0);
+        boolean c = a.skarast(b);
+        System.out.println(c);
     }
 }
