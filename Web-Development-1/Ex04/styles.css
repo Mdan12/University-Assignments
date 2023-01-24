@@ -1,0 +1,241 @@
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
+
+  /* Lætur skroll innan síðu taka tíma */
+  scroll-behavior: smooth;
+}
+
+/* og látum erfast á allt */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Breytur sem skal nota */
+
+:root {
+  /* Grunn bilið okkar er 1rem == 16px */
+  --spacing: 1rem;
+  /* Hámarksbreidd á efni */
+  --max-width: 1200px;
+
+  --color-primary: #f0f0f8;
+
+  --color-header: #fff;
+  --color-text: #000;
+  --color-border: #ccc;
+
+  /* Letur stillingar */
+  --font-base-body-px: 16px;
+  --font-base-size: 1rem;
+  --font-family-base: 'Nunito', Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Domine', Georgia, serif;
+}
+
+
+body {
+  color: var(--color-text);
+  font-size: var(--font-base-body-px);
+  line-height: 1.5;
+  font-family: var(--font-family-base);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-family-heading);
+}
+
+h1 {
+  font-size: 44px;
+}
+
+header .protection {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--color-primary);
+  border-radius: 6px;
+  padding: 0.7rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.button-secondary {
+  background-color: inherit;
+}
+
+
+main {
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+.info-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+}
+
+
+html body main#lorem-ipsum section.examples div.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 1rem;
+  justify-content: center;
+  max-width: 1400px;
+}
+
+html body main#lorem-ipsum section.examples div.cards section.card {
+  display: flex;
+  flex-direction: column;
+}
+
+html body main#lorem-ipsum section.examples div.cards section.card div.border-text {
+  border-style: solid;
+  border-color: var(--color-border);
+  border-width: 0px 1px 1px 1px;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+}
+
+html body main#lorem-ipsum section.examples {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+html body main#lorem-ipsum section.examples div.cards section.card img {
+  order: -3;
+  object-fit: cover;
+  max-height: 350px;
+}
+
+header {
+ 
+  min-height: 100vh;
+  background-image: url(./myndir/header.jpg);
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+
+.headerTop > p:nth-child(2) {
+  font-size: var(--font-base-size);
+}
+
+html body div.headerTop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-header);
+  font-family: var(--font-family-base);
+  text-align: center;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 10;
+}
+
+
+html body main#lorem-ipsum {
+  max-width: 1200px;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+
+
+html body div.headerTop img{
+  background-image: url("myndir/header.jpg");
+  background-color: #cccccc;
+  background-attachment: fixed;
+  margin-bottom: 3rem;
+}
+
+p {
+  padding: 0.5rem 0;
+}
+
+html body main#lorem-ipsum section.info{
+  margin: 7rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1400px;
+}
+
+html body main#lorem-ipsum section.info img{
+  transform: rotate(3deg);
+  height: 400px;
+  margin-left: auto;
+  width: 600px;
+}
+
+.info-left {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: 400px;
+  margin: auto;
+}
+
+html body main#lorem-ipsum section.info1{
+  display: flex;
+  align-content: flex-start;
+  margin: 5rem 0 3rem  0;
+  flex-direction: row-reverse;
+  max-width: 1400px;
+}
+
+html body main#lorem-ipsum section.info1 img {
+  height: 400px;
+  width: 600px;
+  transform: rotate(-3deg);
+}
+
+.info-left1 {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: 5rem;
+}
+
+html body main#lorem-ipsum section.examples div.cards section.card div.border-text div.card-button {
+  position: absolute;
+  bottom: 8px;
+}
+
+
+footer {
+  background-color: var(--color-primary);
+    text-align: center;
+    height: 3rem;
+    margin-top: 80px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}

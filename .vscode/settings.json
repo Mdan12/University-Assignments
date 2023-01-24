@@ -5,31 +5,6 @@
         "/Users/magnusde93/Downloads/stdlib.jar",
         "/Users/magnusde93/Downloads/IntroCS/**/*.jar",
         "/Users/magnusde93/Downloads/commons-lang3-3.12.0.jar",
-        "/Users/magnusde93/Downloads/commons.jar",
-        "Graphical-User-Interface-Programming/HelloFX/lib/javafx-swt.jar",
-        "Graphical-User-Interface-Programming/HelloFX/lib/javafx.base.jar",
-        "Graphical-User-Interface-Programming/HelloFX/lib/javafx.controls.jar",
-        "Graphical-User-Interface-Programming/HelloFX/lib/javafx.fxml.jar",
-        "Graphical-User-Interface-Programming/HelloFX/lib/javafx.graphics.jar",
-        "Graphical-User-Interface-Programming/HelloFX/lib/javafx.media.jar",
-        "Graphical-User-Interface-Programming/HelloFX/lib/javafx.swing.jar",
-        "Graphical-User-Interface-Programming/HelloFX/lib/javafx.web.jar"
-    ],
-    "java.project.sourcePaths": [
-        "Graphical-User-Interface-Programming/HelloFX/src",
-        "Computer-Science-1/Week-13",
-        "Computer-Science-1/Week-12",
-        "Computer-Science-1/Week-11",
-        "Computer-Science-1/Week-10",
-        "Computer-Science-1/Week-09",
-        "Computer-Science-1/Week-08",
-        "Computer-Science-1/Week-07",
-        "Computer-Science-1/Week-06",
-        "Computer-Science-1/Week-05",
-        "Computer-Science-1/Week-04",
-        "Computer-Science-1/Week-03",
-        "Computer-Science-1/Week-02",
-        "Computer-Science-1/Week-01",
-        "Graphical-User-Interface-Programming/HelloFX/HalloHeimur/src/main/java/vidmot"
+        "/Users/magnusde93/Downloads/commons.jar"
     ]
 }

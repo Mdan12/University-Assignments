@@ -1,8 +1,0 @@
-4
-ganga 1.0
-rafbíll 7.8
-rafhlaupahjól 1.1
-strætó 2.5
-strætó,5,rafhlaupahjól,3
-rafbíll,3
-strætó,10,rafhlaupahjól,2,ganga,3
