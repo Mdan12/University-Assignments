@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="437.0" prefWidth="314.0" spacing="20.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.verkefni.PrimaryController">
+<VBox alignment="CENTER" prefHeight="437.0" prefWidth="314.0" spacing="20.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.ReiknivelController">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
@@ -64,7 +64,7 @@
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Button>
-            <Button id="IDMULTIPLY" mnemonicParsing="false" onAction="#multiplyHandler" prefHeight="121.0" prefWidth="56.0" style="-fx-background-color: #ff9500; -fx-background-radius: 100;" text="X" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button id="12" mnemonicParsing="false" onAction="#virkiHandler" prefHeight="121.0" prefWidth="56.0" style="-fx-background-color: #ff9500; -fx-background-radius: 100;" text="X" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
@@ -74,7 +74,7 @@
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Button>
-            <Button id="-" mnemonicParsing="false" onAction="#minusHandler" prefHeight="122.0" prefWidth="56.0" style="-fx-background-color: #ff9500; -fx-background-radius: 60;" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button id="11" mnemonicParsing="false" onAction="#virkiHandler" prefHeight="122.0" prefWidth="56.0" style="-fx-background-color: #ff9500; -fx-background-radius: 60;" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font name="Times New Roman" size="28.0" />
                </font>
@@ -84,7 +84,7 @@
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Button>
-            <Button id="+" mnemonicParsing="false" onAction="#plusHandler" prefHeight="91.0" prefWidth="57.0" style="-fx-background-color: #ff9500; -fx-background-radius: 60;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button id="10" mnemonicParsing="false" onAction="#virkiHandler" prefHeight="91.0" prefWidth="57.0" style="-fx-background-color: #ff9500; -fx-background-radius: 60;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font name="Times New Roman" size="22.0" />
                </font>
@@ -124,7 +124,7 @@
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Button>
-            <Button id="division" mnemonicParsing="false" onAction="#divisionHandler" prefHeight="44.0" prefWidth="89.0" style="-fx-background-color: #ff9500; -fx-background-radius: 60;" text="÷" textFill="WHITE" GridPane.columnIndex="3">
+            <Button id="13" mnemonicParsing="false" onAction="#virkiHandler" prefHeight="44.0" prefWidth="89.0" style="-fx-background-color: #ff9500; -fx-background-radius: 60;" text="÷" textFill="WHITE" GridPane.columnIndex="3">
                <font>
                   <Font name="Times New Roman" size="24.0" />
                </font>
