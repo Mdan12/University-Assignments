@@ -1,0 +1,5 @@
+Málmur  Eðlisþyngd  Bræðslumark
+Ál         2.70         933
+Járn       7.87        1538
+Kopar      8.96        1085
+Gull      19.30        1064
