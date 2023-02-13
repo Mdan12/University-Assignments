@@ -1,7 +1,7 @@
-module hi.verkefni {
+module is.hi.verkefni {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens hi.vidmot to javafx.fxml;
-    exports hi.vidmot;
+    opens is.hi.verkefni to javafx.fxml;
+    exports is.hi.verkefni;
 }
