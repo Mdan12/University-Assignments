@@ -9,6 +9,7 @@ import vinnsla.Pipa.Att;
 public class Pipukista {
     private final ObservableList<Pipa> kista = FXCollections.observableArrayList();
 
+
     private Pipukista(int fjoldi){
         for (int i = 0; i<fjoldi; i++){
             kista.add(nyPipa());

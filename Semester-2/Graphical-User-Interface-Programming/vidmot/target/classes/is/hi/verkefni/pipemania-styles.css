@@ -1,18 +1,18 @@
-.StyleClass{
+.NA, .AN{
     -fx-background-image: url("myndir/NA.jpg");  
 }
-.SA{
+.SA, .AS{
     -fx-background-image: url("myndir/SA.jpg");  
 }
-.NS{
+.NS, .SN{
     -fx-background-image: url("myndir/NS.jpg");  
 }
-.NV{
+.NV, .VN{
     -fx-background-image: url("myndir/NV.jpg");  
 }
-.SV{
+.SV, .VS{
     -fx-background-image: url("myndir/SV.jpg");  
 }
-.VA{
+.VA, .AV{
     -fx-background-image: url("myndir/VA.jpg");  
 }
