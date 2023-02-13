@@ -1,8 +1,5 @@
 package vinnsla;
 
-import is.hi.verkefni.Pipukista;
-
-//import ...
 
 import javafx.beans.binding.BooleanExpression;
 import javafx.beans.property.IntegerProperty;
@@ -22,8 +19,8 @@ public class PipeMania {
 
     private Pipukista myChest;
 
-    public Pipemania(int fjoldipipa) {
-        myChest = new Pipukista(fjoldipipa);
+    public PipeMania(int fjoldipipa) {
+        this.myChest = new Pipukista(fjoldipipa);
     }
 
     public IntegerProperty stigProperty() {
@@ -76,6 +73,13 @@ public class PipeMania {
     public void flaedir(){
         //uppfÃ¦ra stig aaaaaa
         //.flaedir();
+    }
+    public Pipukista getpipukista(){
+        return myChest;
+    }
+
+    public ObservableList<Pipa> getKista(){
+        return kista;
     }
 
 }

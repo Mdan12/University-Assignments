@@ -1,5 +1,4 @@
 package is.hi.verkefni;
-import java.util.Observable;
 
 import javax.swing.Action;
 
@@ -12,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import vinnsla.Pipa;
 import vinnsla.PipeMania;
+import vinnsla.Pipukista;
 
 
 
@@ -27,7 +27,6 @@ public class PipeManiaController {
 
     public void birtaMyndir(ObservableList<Pipa> q){
         int i = 3;
-        ObservableList<Pipa> q = pipemania.getPipukista();
         for (Pipa p : q){
             fxButar.getChildren().get(i).getStyleClass().clear();
             fxButar.getChildren.get(i--). getStyleClass().add(getStyleClass().add(getMyndStyleClass(p)));
@@ -43,13 +42,20 @@ public class PipeManiaController {
     public Button fxButar;
 
     public void initialize(){
-        pipemania = new PipeMania();
+        this.pipemania = new PipeMania(4);
         fxStig.textProperty().bind(pipemania.stigProperty().asString());
-        q.addListener((ListChangeListener<Pipa>) change -> (
+
+        pipemania.nuverandiPipaProperty().addListener((observable, oldValue, newValue) -> {
+            Button hnappur = ( (Button) fxBord.getChildren().get(last_x * 5 + last_y));
+            hnappur.getStyleClass().add(getStilKlasi(newValue));
+        });
+        pipemania.setNaestaPipa(last_x, last_y);
+        ObservableList<Pipa> q = pipemania.getP().getKista();
+        q.addListener((ListChangeListener<Pipa>) change -> {
         if (change.next() && change.wasAdded()){
             birtaMyndir(q);
-        }
-    ))
+        
+        }});
     }
 
     public void fxVeljaReit(ActionEvent actionEvent){
@@ -73,7 +79,4 @@ public class PipeManiaController {
     public String getStilKlasi(Pipa p){
         return ("."+p.getInn()+p.getUt());
     }
-    mania.nuverandiPipaProperty().addListener((observable, oldValue, newValue) ->
-    Button hnappur = ( (Button) fxBord.getChildren().get(last_x * 5 + last_y)));
-    hnappur.getStyleClass().add(getMyndStyleClass(newValue));
 }

@@ -1,16 +1,15 @@
-package is.hi.verkefni;
+package vinnsla;
 
 import java.util.Random;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import vinnsla.Pipa;
 import vinnsla.Pipa.Att;
 
 public class Pipukista {
     private final ObservableList<Pipa> kista = FXCollections.observableArrayList();
 
 
-    private Pipukista(int fjoldi){
+    public Pipukista(int fjoldi){
         for (int i = 0; i<fjoldi; i++){
             kista.add(nyPipa());
         }
@@ -40,5 +39,8 @@ public class Pipukista {
         kista.add(nyr);
         //skilum pipunni sem a ad fara a bordid
         return naesti;
+    }
+    public ObservableList<Pipa> getKista(){
+        return kista;
     }
 }
