@@ -1,0 +1,15 @@
+bókstafur,litur,flokkur
+D,#00adef,Sjálfstæðisflokkur
+V,#488e41,Vinstri grænir
+P,#522c7f,Píratar
+B,#8ec83e,Framsóknarflokkur
+C,#FFA400,Viðreisn
+A,#92278f,Björt framtíð
+S,#da2128,Samfylking
+T,#eab943,Dögun
+M,#199094,Miðflokkur
+R,#da2128,Alþýðufylking
+J,#ff3500,Sósíalistaflokkur
+F,#ffd600,Flokkur fólksins
+O,#9f522d,Frjálslyndi lýðræðisfl.
+Y,#808080,Ábyrg framtíð
