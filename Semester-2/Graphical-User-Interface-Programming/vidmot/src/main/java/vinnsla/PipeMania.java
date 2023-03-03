@@ -14,6 +14,10 @@ public class PipeMania {
     private static final int F = 5;
     private final Pipa[][] pipulogn = new Pipa[F][F];
     private IntegerProperty stig = new SimpleIntegerProperty();
+    private int counterStig = 0;
+    private boolean first = true;
+    private Pipa firstaPipa;
+    private boolean tapaLeik = false;
 
     private final ObjectProperty<Pipa> nuverandiPipa = new SimpleObjectProperty<Pipa>();
 
@@ -39,6 +43,13 @@ public class PipeMania {
         this.stig.set(stig);
     }
 
+    public void setTapaLeik(boolean tapaLeik){
+        this.tapaLeik = tapaLeik;
+    }
+
+    public boolean isTapaLeik(){
+        return tapaLeik;
+    }
     public ObservableList<Pipa> getMyChest() {
         return myChest.getKista();
     }
@@ -63,6 +74,7 @@ public class PipeMania {
     public void setNuverandiPipa(Pipa nuverandiPipa) {
         this.nuverandiPipa.set(nuverandiPipa);
     }
+    
 
     public void setNaestaPipa(int i, int j){
         Pipa temp = myChest.naestaPipa();
@@ -70,9 +82,7 @@ public class PipeMania {
         setNuverandiPipa(temp);
     }
 
-    public void flaedir(){
-        //uppfÃ¦ra stig aaaaaa
-        //.flaedir();
+    public void flaedir(){ 
     }
     public Pipukista getpipukista(){
         return myChest;

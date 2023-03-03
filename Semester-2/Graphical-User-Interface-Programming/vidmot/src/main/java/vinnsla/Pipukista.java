@@ -43,4 +43,5 @@ public class Pipukista {
     public ObservableList<Pipa> getKista(){
         return kista;
     }
+
 }

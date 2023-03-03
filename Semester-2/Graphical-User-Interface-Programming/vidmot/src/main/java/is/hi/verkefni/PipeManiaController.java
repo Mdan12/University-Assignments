@@ -1,6 +1,5 @@
 package is.hi.verkefni;
 
-import javax.swing.Action;
 
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
@@ -28,9 +27,11 @@ public class PipeManiaController {
     public void birtaMyndir(ObservableList<Pipa> q){
         int i = 3;
         for (Pipa p : q){
-            fxButar.getChildren().get(i).getStyleClass().clear();
-            fxButar.getChildren.get(i--). getStyleClass().add(getStyleClass().add(getMyndStyleClass(p)));
+            fxButar.getChildrenUnmodifiable().get(i).getStyleClass().clear();
+            fxButar.getChildrenUnmodifiable().get(i--).getStyleClass().add(getMyndStyleClass(p));
+
         }
+    }
 
     @FXML
     private Label fxStig;
@@ -59,18 +60,29 @@ public class PipeManiaController {
     }
 
     public void fxVeljaReit(ActionEvent actionEvent){
+        if (!pipemania.isGameOver()) {
+            Button nappur = ((Button) actionEvent.getTarget());
+            last_x = GridPane.getRowIndex(nappur);
+            last_y = GridPane.getColumnIndex(nappur);
+
+            if (pipemania.skodaPipulogn(last_x, last_y)) {
+                Pipa pipa = pipemania.getpipukista().naestaPipa();
+                mania.setNaestaPipa(last_x, last_y, pipa);
+                mostRecentPipe = pipa;
+            }
+        }
 
     }
     public void fxAthFlaedir(ActionEvent actionEvent){
 
     }
     public void ytaAHnap(ActionEvent actionEvent){
-        Pipa p = Pipukista.next();
-        Button hnappur = ( Button ) actionEvent.getSource();
-        hnappur.getMyndStyleClass().add(getStilKlasi(p));
-        last_x = GridPane.getColumnIndex(hnappur);
-        last_y = GridPane.getRowIndex(hnappur);
-        pipukista.naestaPipa(last_x, last_y);
+        // Pipa p = Pipukista.next();
+        // Button hnappur = ( Button ) actionEvent.getSource();
+        // hnappur.getMyndStyleClass().add(getStilKlasi(p));
+        // last_x = GridPane.getColumnIndex(hnappur);
+        // last_y = GridPane.getRowIndex(hnappur);
+        // Pipukista.naestaPipa(last_x, last_y);
     }
 
     public void fxButar(ActionEvent actionEvent){
