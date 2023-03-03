@@ -30,7 +30,7 @@ public class Verkefni {
     }
 
     public static void main(String[] args) {
-        In in = new In("1Kints.txt");
+        In in = new In("32Kints.txt");
         int[] a = in.readAllInts();
         Stopwatch timer = new Stopwatch(); 
         sort(a);
