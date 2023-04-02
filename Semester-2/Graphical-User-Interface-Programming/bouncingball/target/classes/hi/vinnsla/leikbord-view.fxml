@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import hi.vinnsla.Bolti?>
+<?import hi.vinnsla.Pallur?>
+
+
+<fx:root fx:id="fxLeikbord" type="javafx.scene.layout.Pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Bolti fx:id="fxBolti"/>
+        <Pallur fx:id="fxPallur"/>
+        <Pallur fx:id="fxPallur1"/>
+        <Pallur fx:id="fxPallur2"/>
+        <Pallur fx:id="fxPallur3"/>
+        <Pallur fx:id="fxPallur4"/>
+        <Pallur fx:id="fxPallur5"/>
+        <Pallur fx:id="fxPallur6"/>
+    </children>
+</fx:root>

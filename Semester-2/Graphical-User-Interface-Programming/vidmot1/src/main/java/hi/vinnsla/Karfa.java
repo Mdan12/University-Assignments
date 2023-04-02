@@ -11,7 +11,7 @@ public class Karfa extends Matsedill{
         return total;
     }
 
-    public int getTotal() {
+    public int stiginProperty() {
         return Karfa.total.get();
     }
 
