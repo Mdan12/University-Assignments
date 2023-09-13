@@ -1,49 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <time.h>
 
-#define MAX_LEN 200
+int *get_ints(size_t n)
+{
+    int *ip;
+    ip = (int *)calloc(n, sizeof(int));
+
+    if (ip == NULL)
+    {
+        printf("Can't allocate %zu ints\n", n);
+    }
+    return ip;
+}
 
 int main(int argc, char **argv)
 {
-    char innstr[MAX_LEN];
-    while (scanf("%s", innstr) != EOF)
+    srand(time(NULL));
+    if (argc < 3)
     {
-        int length = strlen(innstr); // Use strlen to get the length of the input string
-        char *newstr;
-
-        // Check if the input string contains 'x'
-        if (strchr(innstr, 'x') != NULL)
-        {
-            // Allocate memory for the new string containing 'x' repeated 'length' times
-            newstr = (char *)malloc((length + 1) * sizeof(char));
-            if (newstr == NULL)
-            {
-                printf("Can't allocate memory\n");
-                return 1;
-            }
-
-            // Initialize the new string with 'x' repeated 'length' times
-            for (int i = 0; i < length; i++)
-            {
-                newstr[i] = 'x';
-            }
-            newstr[length] = '\0'; // Null-terminate the new string
-        }
-        else
-        {
-            // If the input string doesn't contain 'x', just copy it as-is
-            newstr = strdup(innstr);
-            if (newstr == NULL)
-            {
-                printf("Can't allocate memory\n");
-                return 1;
-            }
-        }
-
-        printf("%s\n", newstr);
-
-        free(newstr); // Free the allocated memory for the new string
+        printf("Usage: %s <filename>\n", argv[0]);
+        return 1;
     }
+    int n = atoi(argv[1]);
+    int k = atoi(argv[2]);
+    int *ip = get_ints(n);
+    for (int i = 0; i < n * k; i++)
+    {
+        int r = rand() % (n - 1);
+        ip[r] += 1;
+    }
+    int cnt = 0;
+    for (int j = 0; j < n; j++)
+    {
+        if (ip[j] == 0)
+            cnt += 1;
+    }
+
+    float percent = ((float)cnt / n) * 100;
+    printf("Eftir %d ítranir eru %d hólf ennþá 0, eða %.2f %%\n", n * k, cnt, percent);
+    free(ip);
     return 0;
 }
