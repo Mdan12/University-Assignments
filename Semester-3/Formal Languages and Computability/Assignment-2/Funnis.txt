@@ -1,0 +1,17 @@
+init: q0
+accept: q4
+
+q0, 1, q1
+q0, A, q2
+q1, 1, q1
+q2, a, q2
+q1, s, q3
+q2, s, q3
+q3, 1, q1
+q3, a, q2
+q3, n, q0
+q1, n, q4
+q2, n, q4
+q3, n, q4
+q4, 1, q1
+q4, A, q2
